@@ -1,0 +1,273 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html { box-sizing: border-box; }
+*, :after, :before { box-sizing: inherit; }
+
+
+/* -------------------------------------------------- */
+
+/*
+pouzivame mobile first pristup
+tj. vychozi styly mimo media query jsou pro nejmensi mobilni zarizeni (telefony)
+s pribyvajici sirkou pridavame media query pro...
+tablety:
+@media (min-width: 480px) {
+}
+notebook/pc:
+@media (min-width: 860px) {
+}
+*/
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;}
+
+.paticka {
+    text-align: center;
+    font-size: 14px;
+    color: silver;}
+
+.paticka a {
+    color: silver;}
+
+
+/* -------------------------------- */
+/* ----- DOLE BUDE TVOJE CSS ------ */
+/* -------------------------------- */
+
+.recept-kategorie,
+.recept-komentare{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* hlavní font */
+.recept-nazev1{
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    color: white;
+    margin: 0;
+    font-size: 28px;
+}
+
+/* vedlejší fonty */
+h2 { 
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    color: white;
+    margin: 0;
+    font-size: 18px;
+  }
+
+.recept-recept2,
+.recept-recept3,
+.recept-recept4,
+.recept-recept5 {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-bottom: 2px solid white;
+    min-height: 90px;
+}
+
+.recept-nazev1{
+    padding: 90px 0 5px 10px;
+}
+
+.recept-nazev{
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+.recept-komentare,
+.recept-kategorie,
+.recept-nazev {
+    color: white;
+    padding-left: 10px;
+}
+
+.recept-meta{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+.hlavni-recept{
+    background-image: url(images/salat.jpg);
+    min-height: 200px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-bottom: 2px solid white;
+}
+
+.recept-kategorie{
+    padding-left: 10px;
+}
+
+.recept-komentare{
+    padding-right: 10px;
+}
+
+.recept-recept2{
+    background-image: url(images/chlebicek.jpg);
+}
+
+.recept-recept3{
+    background-image: url(images/tacos.jpg);
+}
+
+.recept-recept4{
+    background-image: url(images/cizrna.jpg);
+}
+
+.recept-recept5{
+    background-image: url(images/burger.jpg);
+}
+
+
+
+/* TABLET */
+@media (min-width: 480px) and (max-width: 859px){ 
+    .recepty {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .doporucujeme{
+        display: flex;
+        flex-wrap: wrap;
+    } 
+
+    .hlavni-recept{
+        flex: 1 1 100%;
+        min-height: 250px;
+    }
+
+    .recept-recept2,
+    .recept-recept3,
+    .recept-recept4,
+    .recept-recept5{ 
+        flex: 1 1 50%;
+        min-height: 150px;
+    }
+
+    .recept-recept2,
+    .recept-recept4{
+        border-right: 2px solid white;
+    }
+
+    /* vedlejší fonty */
+    h2 { 
+        font-family: "Raleway", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        color: white;
+        margin: 0;
+        font-size: 22px;
+    }
+
+    /* hlavní font */
+    .recept-nazev1{
+        font-family: "Raleway", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        color: white;
+        margin: 0;
+        font-size: 36px;
+    }
+
+    .recept-kategorie{
+        padding-left: 20px;
+    }
+
+    .recept-komentare{
+        padding-right: 20px;
+    }
+    .recept-nazev{
+        margin-top: 90px;
+    }
+
+}
+
+
+/* ------------ PC --------------*/
+@media (min-width: 860px){ 
+    body{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .doporucujeme{
+
+        flex-basis: 33.3%;
+    }
+
+    .recepty {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex-basis: 66.6%;
+    }
+
+    .recept-nazev1{
+        margin-top: 220px;
+    }
+
+    .hlavni-recept{
+        min-height: 400px;
+        flex-wrap: wrap;
+        border-right: 2px solid white;
+        flex-direction: column;
+        flex-direction: row;
+    }
+
+    .recept-recept2,
+    .recept-recept3,
+    .recept-recept4,
+    .recept-recept5{ 
+        min-height: 200px;
+        flex-wrap: wrap;
+        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
+        flex-basis: 50%;
+    }
+
+    .recept-recept2,
+    .recept-recept4{
+        border-right: 2px solid white;
+    }
+
+        /* vedlejší fonty */
+    h2 { 
+        font-family: "Raleway", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        color: white;
+        margin: 0;
+        font-size: 28px;
+    }
+    
+    /* hlavní font */
+    .recept-nazev1{
+        font-family: "Raleway", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        color: white;
+        margin: 0;
+        font-size: 48px;
+    }
+
+    .recept-kategorie{
+        padding-left: 20px;
+    }
+
+    .recept-komentare{
+        padding-right: 20px;
+    }
+}
+
